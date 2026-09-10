@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+sources/drat-trim/
+sources/cadical/
+.DS_Store

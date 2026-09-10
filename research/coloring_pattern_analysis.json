@@ -1,0 +1,488 @@
+{
+  "cases": [
+    {
+      "candidate": "baseline-g3",
+      "color_class_sizes": {
+        "0": 484,
+        "1": 447,
+        "2": 399,
+        "3": 324,
+        "4": 264,
+        "5": 213
+      },
+      "coloring_sha256": "8ac45a490cfbd880af23e676d48eeced5abd84336c3e47d2cbda8c8433fd413d",
+      "directions_repeated_on_multiple_edges": 84,
+      "directions_with_conflicting_color_transition": 84,
+      "directions_with_deterministic_color_transition": 2,
+      "exact_unit_directions_up_to_sign": 86,
+      "graph_sha256": "c841c4583da77f3372e7596ac2483dc43917aa185a24a1e5af7956d806e03236",
+      "largest_conflicting_direction_examples": [
+        {
+          "edge_count": 450,
+          "target_color_sets_by_source": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
+        },
+        {
+          "edge_count": 450,
+          "target_color_sets_by_source": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
+        },
+        {
+          "edge_count": 306,
+          "target_color_sets_by_source": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "g3-seven-rotations",
+      "color_class_sizes": {
+        "0": 3400,
+        "1": 3211,
+        "2": 2822,
+        "3": 2322,
+        "4": 1787,
+        "5": 1369
+      },
+      "coloring_sha256": "063b777f5f32c3a3907c8d5edf54ad37afb35e0b4a85fbcd3fc016ff949982c8",
+      "directions_repeated_on_multiple_edges": 336,
+      "directions_with_conflicting_color_transition": 336,
+      "directions_with_deterministic_color_transition": 14,
+      "exact_unit_directions_up_to_sign": 350,
+      "graph_sha256": "5a7452fcd2c29c7114cc0e90c1718f6b2371a0b8a8ff14ca982f29cc9497de42",
+      "largest_conflicting_direction_examples": [
+        {
+          "edge_count": 1349,
+          "target_color_sets_by_source": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
+        },
+        {
+          "edge_count": 1349,
+          "target_color_sets_by_source": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
+        },
+        {
+          "edge_count": 1349,
+          "target_color_sets_by_source": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": "t6-spindle",
+      "color_class_sizes": {
+        "0": 6203,
+        "1": 5777,
+        "2": 5568,
+        "3": 5213,
+        "4": 4951,
+        "5": 4529
+      },
+      "coloring_sha256": "8b50a1b2bdd0476d48303c735eed2cab1b0491107149693a531115014a2cde79",
+      "directions_repeated_on_multiple_edges": 126,
+      "directions_with_conflicting_color_transition": 90,
+      "directions_with_deterministic_color_transition": 36,
+      "exact_unit_directions_up_to_sign": 126,
+      "graph_sha256": "29cd80477ee6aca8e136f5848793b4830bede865333872e0963d050f96f92202",
+      "largest_conflicting_direction_examples": [
+        {
+          "edge_count": 9605,
+          "target_color_sets_by_source": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
+        },
+        {
+          "edge_count": 9605,
+          "target_color_sets_by_source": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
+        },
+        {
+          "edge_count": 6838,
+          "target_color_sets_by_source": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": "The saved assignments fail translation consistency. They do not supply a universal six-coloring rule; this result does not rule out such a rule.",
+  "goal_satisfied": false,
+  "method": "For each exact unit displacement up to sign, test whether a vertex color uniquely determines its translated neighbor color. This necessary condition for an additive translation action on the six colors is invariant under renaming colors.",
+  "scope": "This tests only saved SAT assignments, not existence of other structured colorings and not all graphs in the field."
+}
