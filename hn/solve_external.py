@@ -3,7 +3,8 @@
 Every run keeps the original canonical CNF, unedited stdout/stderr, native
 solution file, and streamed binary DRAT proof, including partial timeout
 proofs. Exit 10 must yield a complete, independently checked model; exit 20
-must pass the independent geometric and DRAT certificate gate at six colors.
+must pass independent geometric and DRAT checks. Only a verified six-color
+refutation satisfies the target; optional five-color runs are diagnostics.
 """
 
 from __future__ import annotations
@@ -23,6 +24,7 @@ from pathlib import Path
 
 from tools import verify as common
 from tools import verify_mq
+from tools import verify_tower
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -35,7 +37,7 @@ def _dump(path: Path, value: dict) -> None:
 
 
 def compress_completed_run(out: str | Path) -> dict:
-    """Losslessly compress a completed SAT/UNKNOWN proof; preserve raw hash.
+    """Losslessly compress a completed diagnostic proof; preserve raw hash.
 
     A native exit code in the final result is required. The decompressed
     bytes and the still-present original are checked before the original is
@@ -45,10 +47,10 @@ def compress_completed_run(out: str | Path) -> dict:
     result_path = out / "result.json"
     result = json.loads(result_path.read_text())
     if result.get("status") not in (
-        "SAT", "UNKNOWN_TIMEOUT", "UNKNOWN_NATIVE", "STOPPED_ALGEBRAIC_5_COLORING",
+        "SAT", "UNKNOWN", "UNKNOWN_TIMEOUT", "UNKNOWN_NATIVE", "STOPPED_ALGEBRAIC_5_COLORING",
         "ERROR_NATIVE_EXIT", "NON5_VERIFIED"
     ) or "native_exit_code" not in result:
-        raise ValueError("proof compression requires a completed native SAT/UNKNOWN run")
+        raise ValueError("proof compression requires a completed native diagnostic run")
     if "proof_storage" in result:
         return result
     proof = out / "proof.drat"
@@ -132,7 +134,8 @@ def verify_full_cnf_model(cnf: Path, assignment: list[bool]) -> int:
 
 
 def solve_external(graph_path, out, timeout=300.0, solver=DEFAULT_SOLVER,
-                   checker=DEFAULT_CHECKER, seed=0, configuration="default", k=6):
+                   checker=DEFAULT_CHECKER, seed=0, configuration="default", k=6,
+                   phase_file=None):
     if not math.isfinite(timeout) or timeout <= 0:
         raise ValueError("timeout must be positive and finite")
     if configuration not in ("default", "sat", "unsat"):
@@ -146,7 +149,13 @@ def solve_external(graph_path, out, timeout=300.0, solver=DEFAULT_SOLVER,
     checker = Path(checker).resolve(strict=True)
     raw_graph = graph_path.read_bytes()
     graph = json.loads(raw_graph)
-    verifier = verify_mq if graph.get("schema") == "hn-multiquadratic-v1" else common
+    verifier = {
+        "hn-exact-v1": common,
+        "hn-multiquadratic-v1": verify_mq,
+        "hn-cyclotomic-tower-v1": verify_tower,
+    }.get(graph.get("schema"))
+    if verifier is None:
+        raise ValueError("unsupported exact geometry schema")
     # Validate geometry before committing any compute to a candidate.
     geometry = verifier.verify_geometry(graph)
     cnf = out / "coloring.cnf"
@@ -159,6 +168,9 @@ def solve_external(graph_path, out, timeout=300.0, solver=DEFAULT_SOLVER,
     if configuration != "default":
         command.append("--"+configuration)
     command.extend(["-w", str(solution), str(cnf), str(proof)])
+    phase_path = Path(phase_file).resolve(strict=True) if phase_file is not None else None
+    if phase_path is not None:
+        command.extend(["--phase-file", str(phase_path)])
     version = subprocess.run([str(solver), "--version"], text=True, capture_output=True, check=True).stdout.strip()
     provenance = {
         "schema": "hn-native-sat-run-v1", "goal_satisfied": False,
@@ -171,6 +183,10 @@ def solve_external(graph_path, out, timeout=300.0, solver=DEFAULT_SOLVER,
         "configuration": configuration, "proof_format": "binary DRAT",
         "python": sys.version, "platform": platform.platform(),
     }
+    if phase_path is not None:
+        provenance['phase_hint_file'] = str(phase_path)
+        provenance['phase_hint_sha256'] = common._sha256(phase_path)
+        provenance['phase_hint_scope'] = 'Search preferences only; canonical CNF unchanged'
     # Record source identity separately from the executable hash where available.
     source = solver.parent.parent
     source_revision = subprocess.run(["git", "-C", str(source), "rev-parse", "HEAD"], capture_output=True, text=True)
@@ -205,6 +221,8 @@ def solve_external(graph_path, out, timeout=300.0, solver=DEFAULT_SOLVER,
             raise ValueError("canonical CNF changed during native solve")
         if common._sha256(solver) != provenance["solver_sha256"]:
             raise ValueError("native solver executable changed during solve")
+        if phase_path is not None and common._sha256(phase_path) != provenance['phase_hint_sha256']:
+            raise ValueError('Phase hint file changed during solve')
         if timed_out:
             result["status"] = "UNKNOWN_TIMEOUT"
             result["partial_proof_retained"] = proof.exists()

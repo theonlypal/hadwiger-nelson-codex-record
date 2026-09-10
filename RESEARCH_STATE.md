@@ -59,7 +59,7 @@ does not escape F25 when coefficient denominators remain prime to5. The
 Haugland cyclotomic42 field also escapes this particular residue map, since
 F25 has no primitive seventh root of unity.
 
-## Current priority
+## Denominator-five execution
 
 Build exact unit-circle intersections on the V1939 first closure (which
 already contains sqrt2), choosing actual squared center separations that
@@ -79,6 +79,117 @@ uncancelled denominator5 coefficients. Prefer balanced complete60degree
 orbits and verify joint6core/cross-field coupling. Arbitrary denominator5
 rotated copies tested so far create no useful exclusive cross-copy edges;
 do not repeat those disjoint-copy tests.
+
+`runs/mq-pole5-v1` contains the executed construction: 39,997 vertices and
+220,230 exact edges. Complete 60-degree orbits retain 25,608 new pole
+vertices. The 6-core retains 3,324 pole vertices, so the extension creates
+real coupling. Native six-color search found a checked coloring in 82.63
+seconds. Its 5-core has 28,297 vertices and 181,518 edges. The separate
+`runs/mq-pole5-five-core-v1` diagnostic found a proper 5-coloring in 276.73
+seconds; independently reversing the checked peeling order extends it to
+the entire graph. This candidate therefore does not improve the lower bound.
+
+## Mixed cyclotomic tower and direction exclusions
+
+`hn/cyclotomic_tower.py` implements the exact degree-48 field
+`Q(zeta_42)(sqrt5,sqrt33)`. The independent verifier is
+`tools/verify_tower.py`; its 13 additional tests bring the verifier suite
+to 46 tests at that stage. `hn/mixed_cyclotomic.py` forms exact Minkowski sums with
+Heule's 31-point unit-direction configuration.
+
+| Seed | Vertices | Edges | Native six-color result |
+| --- | ---: | ---: | --- |
+| Haugland G1 + V31 | 21,034 | 155,179 | SAT, independently verified |
+| Haugland G3 + V31 | 62,992 | 495,270 | SAT, independently verified |
+
+The second graph uses 198 signed unit directions. Reducing the 48 rational
+basis coefficients modulo 5 gives 96 projectively distinct directions.
+`tools/direction_color_screen.py` found a linear functional to F5 that is
+nonzero on every one. Its explicit coefficients and full proper 5-coloring
+are in `runs/mixed-haugland-g3-v31-linear5`.
+
+This is a direction-set exclusion: it colors every translate of these
+directions, but it is not a claim about all unit directions in the field.
+Coloring-guided augmentations are in `runs/adaptive-mixed-tower-v2`.
+Round 000 has 63,742 vertices and 502,532 edges and also passes independent
+geometry and the explicit 5-coloring. Any further augmentation must be
+checked against this functional before investing in SAT.
+
+Current work seeks exact new unit directions and cross-copy edges that
+escape the saved additive colorings, plus color-guided pole extensions.
+An inability to find an additive coloring is only a search filter; it is
+never evidence of non-5- or non-6-colorability.
+
+`hn/color_filter.py` now verifies every exported edge against a supplied
+five-color functional before allowing an ansatz-based rejection. It checks
+exact geometry independently, never marks the goal satisfied, treats poles
+as inapplicability, and checks all new edges rather than just the direction
+pool. The full test suite currently has 57 passing tests, including the
+later phase-driver and Kempe-witness checks.
+
+## New odd-generator orbit
+
+The exact unit directions `U126={u1^k*t^j:0<=k<3,0<=j<42}` include one
+42-direction orbit absent from Haugland's published U84 construction.
+This direction set admits no additive coefficient functional to F5;
+the small ansatz CNF and independently verified DRAT proof are in
+`runs/tower-odd-generator-minimal/haugland-126`. This is explicitly NOT
+a proof about arbitrary graph colorings.
+
+`hn/odd_power_search.py` constructs finite candidates. The radius-two ball
+has 7,939 vertices and 38,682 edges; native solvers independently verified
+proper six- and five-colorings (the five-color solve took 112.10 seconds).
+The exact endpoint-walk variant enumerates 2,991 step multisets of length
+at most six from 0 to i*sqrt3, producing 31,750 path vertices. Applying the
+two-stage spindle construction gives 82,041 vertices and 604,354 edges in
+`runs/odd-power-t6-spindle-v1`; its unrestricted target SAT run timed out
+after 240 seconds. The partial binary proof is retained as a hash-verified
+gzip stream. This is UNKNOWN, not a lower-bound result.
+
+Finite residue graphs are being studied only as upper-bound filters:
+a checked coloring may lift along an edge-preserving map. A finite
+quotient's non-colorability never establishes non-colorability of a lift.
+
+The combined direction experiment `runs/mixed-g3-v31-odd-rotation-v1`
+forms `G union u1*G` from the mixed tower seed. It has 125,929 vertices,
+991,423 edges, 55 shared vertices, and 985 strict cross-copy edges.
+Native six-color SAT completed in 101.99 seconds; geometry, all graph edges,
+and all 7,963,402 CNF clauses were independently checked. A phase-guided
+five-color diagnostic is now running. Neither a new direction orbit nor
+failure of an additive coloring is a chromatic lower bound.
+
+## Current proof-guided work
+
+`tools/cadical_phase.cpp` is a thin API driver linked against the same pinned
+CaDiCaL library. Its only clause input is the original DIMACS file. It calls
+`phase(literal)` for preferences, never `assume` or `add` for hints. Tests
+confirm that a false hint does not change satisfiability, and an emitted
+UNSAT proof verifies against the original CNF. Driver binary SHA256:
+`4c36bb0431f7daa3043bea79368be853d1bcb947ec3ea82bea670e75e1c57891`.
+
+The active `runs/odd-power-t6-phased-v1` run maps all 32,241 vertices of the
+old T6 spindle's verified six-coloring into the new 82,041-vertex graph.
+Its 193,446 signed phase preferences do not change the canonical CNF. The
+new bound is 600 seconds. A separate algebraic repair search is trying to
+cover every monochromatic edge of a tentative five-coloring by an
+independent set, whose vertices could use the sixth color.
+
+The mixed seed has 12,799 vertex pairs with identical coefficient residues
+modulo 5. Twenty-six additive colorings span all 26 active coefficient
+columns and separate every other pair. Independently replayed Kempe swaps
+separate 10,474 of the residue-collision pairs. A phase-guided unrestricted
+conditional five-color solve also separated the unique remaining pair at
+distance squared 25/3. There remain 2,324 unresolved pairs at distance
+squared 25/9; no pair has been proved forced equal. A native conditional
+test on one representative is running. Such a proof, if obtained, would
+be a five-color gadget certificate, never the requested non-six certificate.
+
+The pole branch now also includes a 40,679-vertex/227,005-edge candidate
+containing every point and edge of the pinned Heule 510 realization. Its
+six-coloring is verified. The 529-center predecessor has a verified full
+five-coloring; adding points that block one model did not prove an
+obstruction to all models. A fresh four-color proof attempt on Heule 510
+timed out, so its published lower bound is kept separate from fresh checks.
 
 ## Solver and certificate tools
 

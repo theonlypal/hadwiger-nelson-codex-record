@@ -54,7 +54,7 @@ def _integer(value: Any, label: str, minimum: int = 0) -> int:
 
 def _structure(graph: Any) -> tuple[int, list[tuple[int, int]]]:
     if not isinstance(graph, dict) or graph.get("schema") not in (
-        "hn-exact-v1", "hn-multiquadratic-v1"
+        "hn-exact-v1", "hn-multiquadratic-v1", "hn-cyclotomic-tower-v1"
     ):
         raise VerificationError("expected a supported exact graph schema")
     vertices = graph.get("vertices")

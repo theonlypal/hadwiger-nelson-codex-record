@@ -4,3 +4,9 @@ __pycache__/
 sources/drat-trim/
 sources/cadical/
 .DS_Store
+# Generated experiments remain on disk. Avoid snapshotting live multi-GB
+# solver proof streams; a final certificate will be curated separately.
+/runs/
+/artifacts/
+/MANIFEST.sha256
+/sources/ducz-varga-2606.28157/*.zip

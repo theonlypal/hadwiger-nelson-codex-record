@@ -61,12 +61,16 @@ def main():
     p.add_argument('--batch',type=int,default=100)
     p.add_argument('--timeout',type=float,default=120)
     p.add_argument('--max-directions',type=int,default=400)
+    p.add_argument('--max-proposals',type=int,default=2000)
     p.add_argument('--native',action='store_true',help='Use the proof-producing independently verified native solver')
+    p.add_argument('--linear-five-rule',type=Path,help='JSON result containing a known tower-field linear_functional')
+    p.add_argument('--screen-linear-five',action='store_true',help='Try a bounded additive five-coloring search on each tower export')
     a=p.parse_args()
     out=Path(a.out);out.mkdir(parents=True,exist_ok=False)
     (out/'program.py').write_bytes(Path(__file__).read_bytes())
     config=dict(vars(a),algorithm='rank exact centers by neighbor palette count then degree',
                 program_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
+    config['linear_five_rule']=str(a.linear_five_rule) if a.linear_five_rule is not None else None
     (out/'config.json').write_text(json.dumps(config,indent=2)+'\n')
     graph=json.loads(Path(a.seed).read_text())
     coloring=json.loads(Path(a.coloring).read_text())
@@ -78,6 +82,11 @@ def main():
         from .mq_construct import export as export_mq
         point_type=Point
         export_graph=export_mq
+    elif graph['schema']=='hn-cyclotomic-tower-v1' and graph['field'].get('cyclotomic_order')==42 and graph['field'].get('radicands')==[5,33]:
+        from .cyclotomic_tower import Element as TowerElement
+        from .mixed_cyclotomic import export as export_tower
+        point_type=TowerElement
+        export_graph=export_tower
     else:
         raise ValueError('Unsupported exact field')
     points=[point_type.from_json(v) for v in graph['vertices']]
@@ -93,7 +102,7 @@ def main():
         raise ValueError('Seed has nonunit edge')
     for iteration in range(a.rounds):
         start=time.monotonic()
-        candidates,stats=candidate_pool(points,colors,directions)
+        candidates,stats=candidate_pool(points,colors,directions,a.max_proposals)
         destination=out/f'round-{iteration:03d}'
         destination.mkdir()
         if not candidates:
@@ -109,6 +118,18 @@ def main():
         print(json.dumps({'stage':'augment','iteration':iteration,'selected':len(chosen),**stats}),flush=True)
         graph=export_graph(points+[c[2] for c in chosen],destination/'graph.json',
                      {'family':'coloring-guided','iteration':iteration,'seed':a.seed,'selected':len(chosen)})
+        if a.linear_five_rule is not None or a.screen_linear_five:
+            from .color_filter import check_functional, search_functional
+            certificate = None
+            if a.linear_five_rule is not None:
+                functional = json.loads(a.linear_five_rule.read_text())['linear_functional']
+                certificate = check_functional(destination/'graph.json', functional, destination/'known-five-rule')
+            if a.screen_linear_five and (certificate is None or certificate['status'] != 'FIVE_COLORING_VERIFIED'):
+                certificate = search_functional(destination/'graph.json', destination/'five-rule-search')
+            if certificate['status'] == 'FIVE_COLORING_VERIFIED':
+                print(json.dumps({'stage':'candidate_excluded_by_verified_five_coloring',
+                                  'path':str(destination),'goal_satisfied':False}),flush=True)
+                break
         if a.native:
             from .solve_external import solve_external
             result=solve_external(destination/'graph.json',destination/'six-color',a.timeout,configuration='sat')
