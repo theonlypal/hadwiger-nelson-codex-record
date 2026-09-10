@@ -1,0 +1,407 @@
+{
+  "scope": "exact construction diagnostics only; no chromatic lower bound",
+  "field": {
+    "base_radicands": [
+      2,
+      3
+    ],
+    "extension_squares": [
+      [
+        5,
+        3,
+        -1,
+        3
+      ],
+      [
+        5,
+        3,
+        1,
+        -3
+      ]
+    ],
+    "degree": 16
+  },
+  "program_sha256": "3e3c56149d57d08d5ec34081343261179f9f1bab7e19e5a0278b7f88c8f4848e",
+  "positive_root_convention": true,
+  "h1_h7_product": [
+    "-14",
+    "48",
+    "0",
+    "0"
+  ],
+  "notebook_generator_equals_phi0_power4_times_conjugate_phi1": true,
+  "embeddings": [
+    {
+      "sqrt2_sign": 1,
+      "sqrt3_sign": 1,
+      "signs_h1_h7_product": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "sqrt2_sign": 1,
+      "sqrt3_sign": -1,
+      "signs_h1_h7_product": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "sqrt2_sign": -1,
+      "sqrt3_sign": 1,
+      "signs_h1_h7_product": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "sqrt2_sign": -1,
+      "sqrt3_sign": -1,
+      "signs_h1_h7_product": [
+        1,
+        -1,
+        -1
+      ]
+    }
+  ],
+  "finite_images": [
+    {
+      "sqrt2": [
+        0,
+        1
+      ],
+      "sqrt3": [
+        0,
+        2
+      ],
+      "h1": [
+        2,
+        1
+      ],
+      "h7": [
+        3,
+        0
+      ],
+      "h1_square_roots": [],
+      "h7_square_roots": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "product": [
+        1,
+        3
+      ],
+      "product_norm_to_F5": 3,
+      "joint_extension_possible": false
+    },
+    {
+      "sqrt2": [
+        0,
+        1
+      ],
+      "sqrt3": [
+        0,
+        3
+      ],
+      "h1": [
+        3,
+        0
+      ],
+      "h7": [
+        2,
+        1
+      ],
+      "h1_square_roots": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "h7_square_roots": [],
+      "product": [
+        1,
+        3
+      ],
+      "product_norm_to_F5": 3,
+      "joint_extension_possible": false
+    },
+    {
+      "sqrt2": [
+        0,
+        4
+      ],
+      "sqrt3": [
+        0,
+        2
+      ],
+      "h1": [
+        3,
+        0
+      ],
+      "h7": [
+        2,
+        4
+      ],
+      "h1_square_roots": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "h7_square_roots": [],
+      "product": [
+        1,
+        2
+      ],
+      "product_norm_to_F5": 3,
+      "joint_extension_possible": false
+    },
+    {
+      "sqrt2": [
+        0,
+        4
+      ],
+      "sqrt3": [
+        0,
+        3
+      ],
+      "h1": [
+        2,
+        4
+      ],
+      "h7": [
+        3,
+        0
+      ],
+      "h1_square_roots": [],
+      "h7_square_roots": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "product": [
+        1,
+        2
+      ],
+      "product_norm_to_F5": 3,
+      "joint_extension_possible": false
+    }
+  ],
+  "rotations": [
+    {
+      "j": 1,
+      "w": {
+        "x": [
+          "1",
+          "1/4",
+          "0",
+          "1/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "y": [
+          "0",
+          "-1/4",
+          "0",
+          "1/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "s": [
+        "2",
+        "1/2",
+        "0",
+        "1/2"
+      ],
+      "h": [
+        "5",
+        "3",
+        "-1",
+        "3"
+      ],
+      "psi_expected_coordinates": {
+        "x": [
+          "5/8",
+          "1/16",
+          "0",
+          "1/16",
+          "-1/4",
+          "1/8",
+          "-1/8",
+          "1/8",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "y": [
+          "3/4",
+          "-5/16",
+          "3/8",
+          "-7/16",
+          "1/8",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "unit_norm_identity_checked": true,
+      "unit_edge_2_to_psi_w_checked": true,
+      "primary_rotation_row": 2,
+      "primary_equals_phi0_power_times_psi": 13
+    },
+    {
+      "j": 7,
+      "w": {
+        "x": [
+          "1",
+          "1/4",
+          "0",
+          "-1/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "y": [
+          "0",
+          "1/4",
+          "0",
+          "1/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "s": [
+        "2",
+        "1/2",
+        "0",
+        "-1/2"
+      ],
+      "h": [
+        "5",
+        "3",
+        "1",
+        "-3"
+      ],
+      "psi_expected_coordinates": {
+        "x": [
+          "5/8",
+          "1/16",
+          "0",
+          "-1/16",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/4",
+          "-1/8",
+          "-1/8",
+          "1/8",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "y": [
+          "-3/4",
+          "5/16",
+          "3/8",
+          "-7/16",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/8",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "unit_norm_identity_checked": true,
+      "unit_edge_2_to_psi_w_checked": true,
+      "primary_rotation_row": 3,
+      "primary_equals_phi0_power_times_psi": 19
+    }
+  ],
+  "success_certificate": false,
+  "primary_rotation_file_sha256": "a227b42a7e03799e67c8dfaa8d12b99f69019ad822f75499035a54e76bcf6531"
+}

@@ -155,7 +155,7 @@ forms `G union u1*G` from the mixed tower seed. It has 125,929 vertices,
 991,423 edges, 55 shared vertices, and 985 strict cross-copy edges.
 Native six-color SAT completed in 101.99 seconds; geometry, all graph edges,
 and all 7,963,402 CNF clauses were independently checked. A phase-guided
-five-color diagnostic is now running. Neither a new direction orbit nor
+five-color diagnostic timed out after 300.24 seconds. Neither a new direction orbit nor
 failure of an additive coloring is a chromatic lower bound.
 
 ## Current proof-guided work
@@ -167,22 +167,35 @@ confirm that a false hint does not change satisfiability, and an emitted
 UNSAT proof verifies against the original CNF. Driver binary SHA256:
 `4c36bb0431f7daa3043bea79368be853d1bcb947ec3ea82bea670e75e1c57891`.
 
-The active `runs/odd-power-t6-phased-v1` run maps all 32,241 vertices of the
+The `runs/odd-power-t6-phased-v1` run maps all 32,241 vertices of the
 old T6 spindle's verified six-coloring into the new 82,041-vertex graph.
 Its 193,446 signed phase preferences do not change the canonical CNF. The
-new bound is 600 seconds. A separate algebraic repair search is trying to
-cover every monochromatic edge of a tentative five-coloring by an
-independent set, whose vertices could use the sixth color.
+run timed out after 600.24 seconds. A second phase run based on an improper
+Tabu model timed out after 180.18 seconds. Their proof streams remain
+losslessly archived. Algebraic sixth-color repair failed only for its
+specified ansatz and did not establish non-colorability.
+
+The candidate is now **eliminated by a proper six-coloring** in
+`runs/odd-power-t6-hex-repair-v1`. `tools/hex_seed_repair.py` checks geometric
+seven-color starts, removes one color by minimizing each affected vertex's
+conflicts, and lets every vertex move in local search. The selected start
+had 745 conflicts; 1,528 Tabu moves eliminated them in 0.012 seconds.
+The separate exact verifier checked all 82,041 vertices and 604,354 edges,
+and checked the complete six-color assignment. All older UNKNOWN results
+remain unchanged, but they no longer motivate search on this graph.
 
 The mixed seed has 12,799 vertex pairs with identical coefficient residues
 modulo 5. Twenty-six additive colorings span all 26 active coefficient
 columns and separate every other pair. Independently replayed Kempe swaps
 separate 10,474 of the residue-collision pairs. A phase-guided unrestricted
 conditional five-color solve also separated the unique remaining pair at
-distance squared 25/3. There remain 2,324 unresolved pairs at distance
-squared 25/9; no pair has been proved forced equal. A native conditional
-test on one representative is running. Such a proof, if obtained, would
-be a five-color gadget certificate, never the requested non-six certificate.
+distance squared 25/3. Two small nonlinear offset colorings separate all
+remaining pairs. Independent end-to-end verification covers all
+1,983,964,536 distinct vertex pairs in
+`runs/mixed-five-nonlinear-offset-completion/independent-complete-pair-verification.json`.
+Thus this graph has no forced-equality pair in proper five-colorings.
+The native conditional run was stopped after the full positive witness
+was checked; its original UNKNOWN and partial proof are preserved.
 
 The pole branch now also includes a 40,679-vertex/227,005-edge candidate
 containing every point and edge of the pinned Heule 510 realization. Its
@@ -190,6 +203,43 @@ six-coloring is verified. The 529-center predecessor has a verified full
 five-coloring; adding points that block one model did not prove an
 obstruction to all models. A fresh four-color proof attempt on Heule 510
 timed out, so its published lower bound is kept separate from fresh checks.
+
+## Voronov independent-radical construction
+
+Primary sources are arXiv:2106.11824v4 and `vsvor/dist-graphs` revision
+`e3714d0a156f6ed151d4521debb2b89ce4f1075c`. The locally generated 73-,
+865-, and 32,257-point base sets match all primary-source coordinates
+exactly; see `research/voronov_source_audit.json`.
+
+`hn/voronov_field.py` represents the real degree-16 field
+Q(sqrt2,sqrt3,a,b), where
+`a^2=5+3sqrt2-sqrt3+3sqrt6` and
+`b^2=5+3sqrt2+sqrt3-3sqrt6`. Mixed signs in the real embeddings prove
+independence of these square classes. The two roots jointly prevent
+every extension of the prior F25 coloring map; that is an upper-color
+filter exclusion, never a lower-bound certificate.
+
+`tools/verify_voronov.py` independently implements arithmetic and the
+exact field-degree check. Arithmetic tests and 62 relevant verifier
+regressions pass, and native dispatch passed a complete positive control.
+
+`runs/voronov-joint-1-7-v1` combines the 32,257-point base with two rotated
+copies. The graph has 96,769 vertices and 814,008 exact edges, including
+480 strict cross-copy edges. Its SHA256 is
+`5ff891f60bb37831e9a6ad112227409d07fe4adcbae58f1406e466fd2919942c`.
+The two nonzero radical branches have no direct unit edges; both interact
+through the shared base. Native six-color SAT timed out after 300.04 seconds,
+but `runs/voronov-joint-1-7-hex-repair-v1` subsequently supplied a verified
+proper six-coloring. Its local repair needed 2,486 moves in 0.016 seconds.
+The original proof stream remains archived. The global additive F5
+coefficient ansatz is UNSAT, so any five-coloring must escape that ansatz;
+no chromatic lower bound follows.
+
+Current construction work tests nonzero rotation centers and exact new
+vertices that block the saved six-color assignment. Every new graph is
+first subjected to the checked geometric-start coloring filter before a
+long native proof search. Blocking one saved coloring never means that
+all colorings are blocked. All 87 current tests pass.
 
 ## Solver and certificate tools
 

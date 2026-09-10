@@ -1,0 +1,67 @@
+{
+  "repository": "https://github.com/vsvor/dist-graphs",
+  "revision": "e3714d0a156f6ed151d4521debb2b89ce4f1075c",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/vsvor/dist-graphs/e3714d0a156f6ed151d4521debb2b89ce4f1075c/README.md",
+      "bytes": 1056,
+      "sha256": "5de85838b08af9b633a57cc7fbf0188785b8ea4fe1c70fbd2ad0a60a2b0b9e9c"
+    },
+    {
+      "path": "check_dist_graphs_plane.ipynb",
+      "url": "https://raw.githubusercontent.com/vsvor/dist-graphs/e3714d0a156f6ed151d4521debb2b89ce4f1075c/check_dist_graphs_plane.ipynb",
+      "bytes": 198638,
+      "sha256": "7ade1ab6b32764ee8af9a721a3aaa30d54694636a4bdf0eb15e56cec5cafe06c"
+    },
+    {
+      "path": "plane/series 2/vtx/README.md",
+      "url": "https://raw.githubusercontent.com/vsvor/dist-graphs/e3714d0a156f6ed151d4521debb2b89ce4f1075c/plane/series%202/vtx/README.md",
+      "bytes": 402,
+      "sha256": "935d0b3d9b097378672ef1688f0baf3f1d1317cf32ab086f27175e315c134502"
+    },
+    {
+      "path": "plane/series 2/vtx/s2_M1.vtx",
+      "url": "https://raw.githubusercontent.com/vsvor/dist-graphs/e3714d0a156f6ed151d4521debb2b89ce4f1075c/plane/series%202/vtx/s2_M1.vtx",
+      "bytes": 3845,
+      "sha256": "04406e1e319a9c62369c22906ac092e2519640b7b51f200039208f43578c4436"
+    },
+    {
+      "path": "plane/series 2/vtx/s2_M2.vtx",
+      "url": "https://raw.githubusercontent.com/vsvor/dist-graphs/e3714d0a156f6ed151d4521debb2b89ce4f1075c/plane/series%202/vtx/s2_M2.vtx",
+      "bytes": 60839,
+      "sha256": "26d85e323ece5f4aee6dcddb47fbe9979b8cfa587a6a9dc7bd286b3422d1f8ed"
+    },
+    {
+      "path": "plane/series 2/vtx/s2_M3.vtx",
+      "url": "https://raw.githubusercontent.com/vsvor/dist-graphs/e3714d0a156f6ed151d4521debb2b89ce4f1075c/plane/series%202/vtx/s2_M3.vtx",
+      "bytes": 2459939,
+      "sha256": "4b87acb4c5eaea8ea20436f65619c0d835791d084b040f1a852c07217a153816"
+    },
+    {
+      "path": "plane/series 2/vtx/rotation",
+      "url": "https://raw.githubusercontent.com/vsvor/dist-graphs/e3714d0a156f6ed151d4521debb2b89ce4f1075c/plane/series%202/vtx/rotation",
+      "bytes": 3297,
+      "sha256": "a227b42a7e03799e67c8dfaa8d12b99f69019ad822f75499035a54e76bcf6531"
+    },
+    {
+      "path": "plane/series 2/vtx/complete lists/s2_graph2.zip",
+      "url": "https://raw.githubusercontent.com/vsvor/dist-graphs/e3714d0a156f6ed151d4521debb2b89ce4f1075c/plane/series%202/vtx/complete%20lists/s2_graph2.zip",
+      "bytes": 1285677,
+      "sha256": "7b901c098c28487ab6888b41ec5016fafb9f7cf17175c4bcef3ea885fa6b2361"
+    },
+    {
+      "path": "plane/series 2/vtx/complete lists/s2_graph3.zip",
+      "url": "https://raw.githubusercontent.com/vsvor/dist-graphs/e3714d0a156f6ed151d4521debb2b89ce4f1075c/plane/series%202/vtx/complete%20lists/s2_graph3.zip",
+      "bytes": 1258469,
+      "sha256": "fa25579dc176bf4ecfb45f03f03bffc5b07f8509165ab75a009a5a2d225cea1c"
+    },
+    {
+      "path": "unsolved CNFs/README.md",
+      "url": "https://raw.githubusercontent.com/vsvor/dist-graphs/e3714d0a156f6ed151d4521debb2b89ce4f1075c/unsolved%20CNFs/README.md",
+      "bytes": 421,
+      "sha256": "c7668d0367d5eaa713ae6014f3709a90db054577d2e427fdea86bfa01d71349d"
+    }
+  ],
+  "scope": "primary author artifacts; no graph validation or solver result inferred"
+}

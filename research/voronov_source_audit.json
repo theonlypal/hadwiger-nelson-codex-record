@@ -1,0 +1,31 @@
+{
+  "scope": "exact primary-coordinate provenance; no chromatic conclusion",
+  "repository": "https://github.com/vsvor/dist-graphs",
+  "revision": "e3714d0a156f6ed151d4521debb2b89ce4f1075c",
+  "program_sha256": "299780300638456d89f4119078d5dc09da92d6ae28870315721eca29d92fd276",
+  "stages": [
+    {
+      "stage": 1,
+      "primary_file": "sources/voronov-dist-graphs/plane/series 2/vtx/s2_M1.vtx",
+      "primary_sha256": "04406e1e319a9c62369c22906ac092e2519640b7b51f200039208f43578c4436",
+      "vertices": 73,
+      "all_coordinates_match_exactly": true
+    },
+    {
+      "stage": 2,
+      "primary_file": "sources/voronov-dist-graphs/plane/series 2/vtx/s2_M2.vtx",
+      "primary_sha256": "26d85e323ece5f4aee6dcddb47fbe9979b8cfa587a6a9dc7bd286b3422d1f8ed",
+      "vertices": 865,
+      "all_coordinates_match_exactly": true
+    },
+    {
+      "stage": 3,
+      "primary_file": "sources/voronov-dist-graphs/plane/series 2/vtx/s2_M3.vtx",
+      "primary_sha256": "4b87acb4c5eaea8ea20436f65619c0d835791d084b040f1a852c07217a153816",
+      "vertices": 32257,
+      "all_coordinates_match_exactly": true
+    }
+  ],
+  "success_certificate": false,
+  "elapsed_seconds": 1.3648786660050973
+}

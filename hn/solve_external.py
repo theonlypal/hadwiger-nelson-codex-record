@@ -25,6 +25,7 @@ from pathlib import Path
 from tools import verify as common
 from tools import verify_mq
 from tools import verify_tower
+from tools import verify_voronov
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -153,6 +154,7 @@ def solve_external(graph_path, out, timeout=300.0, solver=DEFAULT_SOLVER,
         "hn-exact-v1": common,
         "hn-multiquadratic-v1": verify_mq,
         "hn-cyclotomic-tower-v1": verify_tower,
+        "hn-voronov-field-v1": verify_voronov,
     }.get(graph.get("schema"))
     if verifier is None:
         raise ValueError("unsupported exact geometry schema")
