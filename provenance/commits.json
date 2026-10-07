@@ -1,0 +1,26 @@
+[
+  {
+    "commit": "60b69cf167bb6581fe9aa0a00bde2d828918ad5f",
+    "author_date": "2026-09-10T09:58:49-07:00",
+    "committer_date": "2026-09-10T09:58:49-07:00",
+    "author": "Rayan Pal",
+    "email": "rayanpal@Rayans-MacBook-Pro.local",
+    "subject": "Preserve exact search methods, independent verifiers, and active research state"
+  },
+  {
+    "commit": "f42a532daa33d6098d49c3e20e439e984fbbe87e",
+    "author_date": "2026-09-10T10:30:59-07:00",
+    "committer_date": "2026-09-10T10:30:59-07:00",
+    "author": "Rayan Pal",
+    "email": "rayanpal@Rayans-MacBook-Pro.local",
+    "subject": "Add exact mixed-field searches, residue filters, and phase-guided proof runs"
+  },
+  {
+    "commit": "966b629219ab5c0be2c4f1138c36763c8bba7bb6",
+    "author_date": "2026-09-10T10:54:53-07:00",
+    "committer_date": "2026-09-10T10:54:53-07:00",
+    "author": "Rayan Pal",
+    "email": "rayanpal@Rayans-MacBook-Pro.local",
+    "subject": "Add exact Voronov field and checked constructive color filters"
+  }
+]

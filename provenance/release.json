@@ -1,0 +1,10 @@
+{
+  "prepared_utc": "2026-10-07T00:31:05.742657+00:00",
+  "original_head": "966b629219ab5c0be2c4f1138c36763c8bba7bb6",
+  "date_scope": "September 10 dates are recorded local timestamps and Git metadata, not independent public timestamp attestations. Public release is dated when uploaded.",
+  "code_scope": "code/ is the committed snapshot at original_head, not the later dirty working tree.",
+  "trace_scope": "five-color proof.drat.gz is an incomplete trace from a timeout. six-color proof.drat.gz was emitted during a SAT run. Neither is a completed UNSAT certificate.",
+  "privacy_review": "All reachable original Git blobs and commit metadata, selected transcript records, and small run files scanned for credential patterns. Public-source archives inspected recursively. Retained author-local paths and original author-local Git email preserve provenance.",
+  "credential_pattern_findings": 0,
+  "objects_scanned": 145
+}

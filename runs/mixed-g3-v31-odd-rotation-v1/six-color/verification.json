@@ -1,0 +1,18 @@
+{
+  "certificate_status": "geometry-and-valid-6-coloring",
+  "cnf_clauses_checked": 7963402,
+  "coloring_sha256": "c7a31287e09df9f704f268501b70508262795eca0ab0d9a6a2cec15d422546cc",
+  "complete_native_model_checked": true,
+  "geometry": {
+    "cyclotomic_order": 42,
+    "edges": 991423,
+    "field_degree": 48,
+    "radicands": [
+      5,
+      33
+    ],
+    "vertices": 125929
+  },
+  "goal_satisfied": false,
+  "graph_sha256": "baff9f6fe24055f81ac01fe66fa7530f8c663a05ead97ad13b5b9c917dcfca9b"
+}

@@ -1,0 +1,77 @@
+{
+  "source_basename": "rollout-2026-09-10T09-27-16-01a08c25-1682-7cc2-b9fa-6ce74d51fbb1.jsonl",
+  "source_sha256": "c6235c875f8021c57b9efea793c4b02a8d6b0c875255535814297b359da33df2",
+  "source_line_count": 2774,
+  "records": [
+    {
+      "excerpt_line": 1,
+      "source_line": 9,
+      "timestamp": "2026-09-10T16:29:50.350Z",
+      "sha256_original_line_including_newline": "79516205604e36bee50d8991972bbdabc25978a097aa0f6cb0d5f054177564f5",
+      "type": "message",
+      "role": "user"
+    },
+    {
+      "excerpt_line": 2,
+      "source_line": 369,
+      "timestamp": "2026-09-10T16:40:12.451Z",
+      "sha256_original_line_including_newline": "060bc9108562e1c2c679cc41ebc99115c3eec160b8650d8201f94fb6998f2e93",
+      "type": "message",
+      "role": "user"
+    },
+    {
+      "excerpt_line": 3,
+      "source_line": 383,
+      "timestamp": "2026-09-10T16:41:31.778Z",
+      "sha256_original_line_including_newline": "b557e1157e4bbe3b2c8b1cba8be88026a66c6b9d307de979dcdd647df93aa993",
+      "type": "message",
+      "role": "user"
+    },
+    {
+      "excerpt_line": 4,
+      "source_line": 1509,
+      "timestamp": "2026-09-10T17:28:09.033Z",
+      "sha256_original_line_including_newline": "765bf91c1390115fb28d02f7574fa777c94fc9650bdfe11bcf82ef7f9101d514",
+      "type": "agent_message",
+      "role": null
+    },
+    {
+      "excerpt_line": 5,
+      "source_line": 1657,
+      "timestamp": "2026-09-10T17:35:17.377Z",
+      "sha256_original_line_including_newline": "8706a8d18d897adae176b134aaf587242bb7f4ed3743cacd9462c95346ed75fe",
+      "type": "agent_message",
+      "role": null
+    },
+    {
+      "excerpt_line": 6,
+      "source_line": 1676,
+      "timestamp": "2026-09-10T17:36:22.088Z",
+      "sha256_original_line_including_newline": "3c6302ee4373aa93b4ec5b01ad9c78561aff0e8cd690253616b9665ee28ad24f",
+      "type": "custom_tool_call",
+      "role": null
+    },
+    {
+      "excerpt_line": 7,
+      "source_line": 1680,
+      "timestamp": "2026-09-10T17:36:22.280Z",
+      "sha256_original_line_including_newline": "e46c8676f019d356f585f9e074b22b8be246cb8b77fbfbfd855745b69a150031",
+      "type": "custom_tool_call_output",
+      "role": null
+    },
+    {
+      "excerpt_line": 8,
+      "source_line": 2232,
+      "timestamp": "2026-09-10T18:00:24.737Z",
+      "sha256_original_line_including_newline": "9d6a80e7236281b85ab3d53a86c8949fda35fba80b789d2468bf3301b692681b",
+      "type": "message",
+      "role": "user"
+    }
+  ],
+  "selected_records_modified": false,
+  "omissions": "All other lines omitted. Includes unrelated runtime context, system/developer instructions, reasoning records and intermediate activity. This is a selected excerpt, not the full session.",
+  "metadata_projection": "session-metadata.json retains only the listed metadata fields from original line 1.",
+  "redactions_within_selected_records": [],
+  "privacy": "Original author paths and session identifiers retained as research provenance. Full source session remains private.",
+  "selection": "Initial target, intervening user instructions, six-color report, five-color report, direct run-status command and returned output, and explicit secondary target."
+}

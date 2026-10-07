@@ -1,0 +1,47 @@
+{
+  "cnf_sha256": "10d334a0e2478e5d3716e361ec165acdde4e227b11c9d2d72091045d3d25b04f",
+  "command": [
+    "/Users/rayanpal/hadwiger-nelson/sources/cadical/build/cadical-phase",
+    "--no-colors",
+    "--seed=0",
+    "--sat",
+    "-w",
+    "/Users/rayanpal/hadwiger-nelson/runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/native/solution.out",
+    "/Users/rayanpal/hadwiger-nelson/runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/native/coloring.cnf",
+    "/Users/rayanpal/hadwiger-nelson/runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/native/proof.drat",
+    "--phase-file",
+    "/Users/rayanpal/hadwiger-nelson/runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/phases.txt"
+  ],
+  "configuration": "sat",
+  "edges": 991423,
+  "geometry": {
+    "cyclotomic_order": 42,
+    "edges": 991423,
+    "field_degree": 48,
+    "radicands": [
+      5,
+      33
+    ],
+    "vertices": 125929
+  },
+  "goal_satisfied": false,
+  "graph": "/Users/rayanpal/hadwiger-nelson/runs/mixed-g3-v31-odd-rotation-v1/graph.json",
+  "graph_sha256": "baff9f6fe24055f81ac01fe66fa7530f8c663a05ead97ad13b5b9c917dcfca9b",
+  "k": 5,
+  "phase_hint_file": "/Users/rayanpal/hadwiger-nelson/runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/phases.txt",
+  "phase_hint_scope": "Search preferences only; canonical CNF unchanged",
+  "phase_hint_sha256": "13271b0ca96eb8a7a140f0010ba754bd4525ab60cbdbfc3022cde3526172b0e6",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "proof_format": "binary DRAT",
+  "python": "3.12.8 (main, Dec  6 2024, 19:42:06) [Clang 18.1.8 ]",
+  "schema": "hn-native-sat-run-v1",
+  "seed": 0,
+  "solver": "cadical",
+  "solver_path": "/Users/rayanpal/hadwiger-nelson/sources/cadical/build/cadical-phase",
+  "solver_sha256": "4c36bb0431f7daa3043bea79368be853d1bcb947ec3ea82bea670e75e1c57891",
+  "solver_source_revision": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+  "solver_version": "3.0.1",
+  "success_certificate": false,
+  "timeout_seconds": 300.0,
+  "vertices": 125929
+}

@@ -1,0 +1,62 @@
+{
+  "cnf_clauses_checked": 7963402,
+  "cnf_sha256": "3636cb46811c511b110f8d86f102cf3106cb8a694fd917064c84923051be7f63",
+  "command": [
+    "/Users/rayanpal/hadwiger-nelson/sources/cadical/build/cadical",
+    "--no-colors",
+    "--seed=0",
+    "--sat",
+    "-w",
+    "/Users/rayanpal/hadwiger-nelson/runs/mixed-g3-v31-odd-rotation-v1/six-color/solution.out",
+    "/Users/rayanpal/hadwiger-nelson/runs/mixed-g3-v31-odd-rotation-v1/six-color/coloring.cnf",
+    "/Users/rayanpal/hadwiger-nelson/runs/mixed-g3-v31-odd-rotation-v1/six-color/proof.drat"
+  ],
+  "complete_native_model_checked": true,
+  "configuration": "sat",
+  "edges": 991423,
+  "elapsed_seconds": 101.98596037499374,
+  "geometry": {
+    "cyclotomic_order": 42,
+    "edges": 991423,
+    "field_degree": 48,
+    "radicands": [
+      5,
+      33
+    ],
+    "vertices": 125929
+  },
+  "goal_satisfied": false,
+  "graph": "/Users/rayanpal/hadwiger-nelson/runs/mixed-g3-v31-odd-rotation-v1/graph.json",
+  "graph_sha256": "baff9f6fe24055f81ac01fe66fa7530f8c663a05ead97ad13b5b9c917dcfca9b",
+  "k": 6,
+  "native_exit_code": 10,
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "proof_bytes": 792620820,
+  "proof_format": "binary DRAT",
+  "proof_sha256": "0ce6ee9d385e4f799f3782fa44683009e8cfb1bd7404679cbdee2c01d8748c98",
+  "proof_storage": {
+    "compressed_bytes": 310790208,
+    "compressed_sha256": "dfa384c188270cccc312a426f7e15c2e72197bd4aadb7c0bcfdeedb9d1164df7",
+    "compression": "gzip",
+    "decompression_verified": true,
+    "path": "/Users/rayanpal/hadwiger-nelson/runs/mixed-g3-v31-odd-rotation-v1/six-color/proof.drat.gz",
+    "uncompressed_bytes": 792620820,
+    "uncompressed_sha256": "0ce6ee9d385e4f799f3782fa44683009e8cfb1bd7404679cbdee2c01d8748c98"
+  },
+  "proper_coloring_checked": true,
+  "python": "3.12.8 (main, Dec  6 2024, 19:42:06) [Clang 18.1.8 ]",
+  "schema": "hn-native-sat-run-v1",
+  "seed": 0,
+  "solver": "cadical",
+  "solver_path": "/Users/rayanpal/hadwiger-nelson/sources/cadical/build/cadical",
+  "solver_sha256": "39143d3955b59965d9e8ec2b7df71206fa4380d6f17c3c8e3254dce653897fd0",
+  "solver_source_revision": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+  "solver_version": "3.0.1",
+  "status": "SAT",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "d5634c2963114acfed42db5e040ed508f48f3f87119b1cf3f9f4217a08f796a5",
+  "success_certificate": false,
+  "timed_out": false,
+  "timeout_seconds": 300.0,
+  "vertices": 125929
+}

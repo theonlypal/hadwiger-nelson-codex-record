@@ -1,0 +1,177 @@
+[
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/copy-memberships.json",
+    "bytes": 1034766,
+    "source_mtime_ns": 1789061117942845505,
+    "source_mtime_utc": "2026-09-10T17:25:17.942846+00:00",
+    "sha256": "39486d62fcabf5449a83c4c62e10543d3956ea8683257ab062f52b644679835d"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/coupling.json",
+    "bytes": 1078,
+    "source_mtime_ns": 1789061117937172432,
+    "source_mtime_utc": "2026-09-10T17:25:17.937172+00:00",
+    "sha256": "5aca74719c057224d0ce809875045f4025b950329b519f6043cc9bae025359e8"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/native/coloring.cnf",
+    "bytes": 113992305,
+    "source_mtime_ns": 1789061365088283583,
+    "source_mtime_utc": "2026-09-10T17:29:25.088284+00:00",
+    "sha256": "10d334a0e2478e5d3716e361ec165acdde4e227b11c9d2d72091045d3d25b04f"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/native/config.json",
+    "bytes": 1988,
+    "source_mtime_ns": 1789061365227719715,
+    "source_mtime_utc": "2026-09-10T17:29:25.227720+00:00",
+    "sha256": "33176282f9cefcb0f2fb318d45a19aafd3319fd1e2c4550fbf67a2ec9626fccc"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/native/proof.drat.gz",
+    "bytes": 297962683,
+    "source_mtime_ns": 1789061679980501257,
+    "source_mtime_utc": "2026-09-10T17:34:39.980501+00:00",
+    "sha256": "58cce80c059d34ada75c9ed69c6908f4768ec3eac83192515df73132b2e596bb"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/native/result.json",
+    "bytes": 2899,
+    "source_mtime_ns": 1789061681866216078,
+    "source_mtime_utc": "2026-09-10T17:34:41.866216+00:00",
+    "sha256": "85e0bba6fabd86578979ec4496fbf3d3b150d593defee9d188bb28d6335475d2"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/native/solution.out",
+    "bytes": 10,
+    "source_mtime_ns": 1789061665240841056,
+    "source_mtime_utc": "2026-09-10T17:34:25.240841+00:00",
+    "sha256": "2c4c866c90a863846ecab6e6bac416700035e3791b12ca7bb7ce17b07a49ddf5"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/native/solver.stderr.log",
+    "bytes": 0,
+    "source_mtime_ns": 1789061365227940005,
+    "source_mtime_utc": "2026-09-10T17:29:25.227940+00:00",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/native/solver.stdout.log",
+    "bytes": 3448,
+    "source_mtime_ns": 1789061665240736515,
+    "source_mtime_utc": "2026-09-10T17:34:25.240736+00:00",
+    "sha256": "b44b1da83a89d713130324dc8c9f28fcf654560ce850e5906b7de0e74280d0bb"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/overlap-and-phases.json",
+    "bytes": 11401,
+    "source_mtime_ns": 1789061344753551560,
+    "source_mtime_utc": "2026-09-10T17:29:04.753551+00:00",
+    "sha256": "fcf0e112bd2612d6da544da1f63aa72562346c6868699e37d17b9283e9afc842"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/overlap-residue-rank.json",
+    "bytes": 90536,
+    "source_mtime_ns": 1789061601992421303,
+    "source_mtime_utc": "2026-09-10T17:33:21.992421+00:00",
+    "sha256": "adafe8ba24acdfd8549eb94b9a10b45b53d98b04cdbe49379a4a001d3e19b005"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/phases.txt",
+    "bytes": 2370315,
+    "source_mtime_ns": 1789061344709143918,
+    "source_mtime_utc": "2026-09-10T17:29:04.709144+00:00",
+    "sha256": "13271b0ca96eb8a7a140f0010ba754bd4525ab60cbdbfc3022cde3526172b0e6"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/program.py",
+    "bytes": 5640,
+    "source_mtime_ns": 1789061342872501872,
+    "source_mtime_utc": "2026-09-10T17:29:02.872502+00:00",
+    "sha256": "5425c216f38afbc83d8736fe6cc6b6e54633da413f46f32dbd567da8c9008cc5"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1.log",
+    "bytes": 6056,
+    "source_mtime_ns": 1789061681889355080,
+    "source_mtime_utc": "2026-09-10T17:34:41.889355+00:00",
+    "sha256": "dea720f7c557305166013b34d4f103ed7d17ce3c57608a7266cc862f8800a6f1"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/graph.json",
+    "bytes": 49954693,
+    "source_mtime_ns": 1789061117936797686,
+    "source_mtime_utc": "2026-09-10T17:25:17.936798+00:00",
+    "sha256": "baff9f6fe24055f81ac01fe66fa7530f8c663a05ead97ad13b5b9c917dcfca9b"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/program.py",
+    "bytes": 7111,
+    "source_mtime_ns": 1789061083879627350,
+    "source_mtime_utc": "2026-09-10T17:24:43.879627+00:00",
+    "sha256": "8769dbee3df65f3bf6872684ac64c6462188e454229c8bd92cd8f524eb5cfc13"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/six-color/coloring.cnf",
+    "bytes": 143865395,
+    "source_mtime_ns": 1789061138715649860,
+    "source_mtime_utc": "2026-09-10T17:25:38.715650+00:00",
+    "sha256": "3636cb46811c511b110f8d86f102cf3106cb8a694fd917064c84923051be7f63"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/six-color/coloring.json",
+    "bytes": 881620,
+    "source_mtime_ns": 1789061246359681798,
+    "source_mtime_utc": "2026-09-10T17:27:26.359682+00:00",
+    "sha256": "c7a31287e09df9f704f268501b70508262795eca0ab0d9a6a2cec15d422546cc"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/six-color/config.json",
+    "bytes": 1510,
+    "source_mtime_ns": 1789061138834452911,
+    "source_mtime_utc": "2026-09-10T17:25:38.834453+00:00",
+    "sha256": "bab313d7bc47f257091b321ba951cfb7fa8674dc857fa68991d138c4187bda81"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/six-color/proof.drat.gz",
+    "bytes": 310790208,
+    "source_mtime_ns": 1789061255238334820,
+    "source_mtime_utc": "2026-09-10T17:27:35.238335+00:00",
+    "sha256": "dfa384c188270cccc312a426f7e15c2e72197bd4aadb7c0bcfdeedb9d1164df7"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/six-color/result.json",
+    "bytes": 2469,
+    "source_mtime_ns": 1789061256761791847,
+    "source_mtime_utc": "2026-09-10T17:27:36.761792+00:00",
+    "sha256": "44ba0ece6f2e4f661eba183c35b89347848e8ea4ab1fc6aaf502878722531364"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/six-color/solution.out",
+    "bytes": 5970384,
+    "source_mtime_ns": 1789061240707283218,
+    "source_mtime_utc": "2026-09-10T17:27:20.707283+00:00",
+    "sha256": "32f6055071a6ae39337c017255d79766db2a944e1c73f4afb6976944381afffd"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/six-color/solver.stderr.log",
+    "bytes": 0,
+    "source_mtime_ns": 1789061138834626534,
+    "source_mtime_utc": "2026-09-10T17:25:38.834626+00:00",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/six-color/solver.stdout.log",
+    "bytes": 10009,
+    "source_mtime_ns": 1789061240707709090,
+    "source_mtime_utc": "2026-09-10T17:27:20.707709+00:00",
+    "sha256": "d5634c2963114acfed42db5e040ed508f48f3f87119b1cf3f9f4217a08f796a5"
+  },
+  {
+    "path": "runs/mixed-g3-v31-odd-rotation-v1/six-color/verification.json",
+    "bytes": 498,
+    "source_mtime_ns": 1789061246362873734,
+    "source_mtime_utc": "2026-09-10T17:27:26.362874+00:00",
+    "sha256": "95fd18efda4c2c27b1ce469aa53f535583cced094fb5c151f8dcb5828b1a95a1"
+  }
+]

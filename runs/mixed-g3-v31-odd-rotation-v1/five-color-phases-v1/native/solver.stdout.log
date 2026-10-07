@@ -1,0 +1,71 @@
+c opening file to write '/Users/rayanpal/hadwiger-nelson/runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/native/proof.drat'
+c opening file to read '/Users/rayanpal/hadwiger-nelson/runs/mixed-g3-v31-odd-rotation-v1/five-color-phases-v1/native/coloring.cnf'
+c found 'p cnf 629645 6342334' header
+c parsed 6342334 clauses in 0.72 seconds process time
+c phase hints 314960 (preferences only)
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c       241.51   84.44% search
+c       230.67   80.65% stable
+c        44.50   15.56% simplify
+c        13.96    4.88% elim
+c        10.82    3.78% walk
+c         6.70    2.34% congruence
+c         6.54    2.29% sweep
+c         3.07    1.07% backbone
+c         2.51    0.88% subsume
+c         0.72    0.25% parse
+c         0.67    0.24% vivify
+c         0.65    0.23% probe
+c         0.61    0.21% ternary
+c         0.02    0.01% lucky
+c   =================================
+c       286.01   99.74% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:            229719        22.65 %  of conflicts
+c conflicts:               1014367      3546.65    per second
+c backbone:               52602665      8354.34 %  of vars
+c decisions:               1302548      4554.25    per second
+c eliminated:               125856        19.99 %  of all variables
+c learned:                  993018        97.90 %  per conflict
+c learned_lits:          251129499       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:               74114053        29.51 %  learned literals
+c minishrunken:           20342981         8.10 %  learned literals
+c otfs:                        483         0.05 %  of conflict
+c propagations:         2158869913         7.55 M  per second
+c reduced:                  882920        87.04 %  per conflict
+c rephased:                     44     23053.80    interval
+c restarts:                    254      3993.57    interval
+c subsumed:                  38794         0.42 %  of all clauses
+c strengthened:               4997         0.05 %  of all clauses
+c ticks:               11034085208         5.58    propagation
+c vivified:                    352         0.00 %  of all clauses
+c walked:                       14     72454.79    interval
+c weakened:                 629280         2.60    average size
+c congruence:                    7    144909.57    interval
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ glue usage ] ---------------------------------------------------------
+c 
+c focused glue 2 used 0 clauses 0.000% accumulated 0.000% tier1
+c focused glue 3 used 0 clauses 0.000% accumulated 0.000%
+c focused glue 4 used 0 clauses 0.000% accumulated 0.000%
+c focused glue 5 used 0 clauses 0.000% accumulated 0.000%
+c focused glue 6 used 0 clauses 0.000% accumulated 0.000% tier2
+c 
+c stable glue 16 used 193856 clauses 2.379% accumulated 51.76% tier1
+c stable glue 17 used 171967 clauses 2.111% accumulated 53.87%
+c stable glue 18-76 used 2730008 clauses 33.51% accumulated 87.39%
+c stable glue 77 used 15500 clauses 0.190% accumulated 87.58%
+c stable glue 78 used 15233 clauses 0.187% accumulated 87.76% tier2
+c 
